@@ -1,0 +1,234 @@
+:root {
+  --primary: #1f3c4f;      /* Azul institucional */
+  --secondary: #2f5d7c;    /* Azul secundario */
+  --accent: #cfd8dc;       /* Gris claro */
+  --background: #eef2f5;   /* Fondo general */
+  --white: #ffffff;
+  --text: #1a1a1a;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* BODY CON FONDO DE COLOR */
+body {
+  min-height: 100vh;
+  background: radial-gradient(
+      circle at top,
+      #2a3f4f 0%,
+      #1f2f3a 45%,
+      #141f26 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #f0f0f0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* LOGO */
+.logo {
+  max-width: 180px;
+  margin: 25px auto 10px;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* NOMBRE DE LA ACADEMIA */
+.academy-name {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* HERO / CARD PRINCIPAL */
+.hero {
+  background: var(--white);
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px var(--shadow);
+  margin-bottom: 25px;
+}
+
+/* TÍTULO PRINCIPAL */
+.hero h1 {
+  font-size: 1.7rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* TEXTO DESCRIPTIVO */
+.hero p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* CONTENEDOR DE BOTONES */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* BOTONES GENERALES */
+.actions button,
+.actions a {
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  display: block;
+}
+
+/* BOTÓN NORMAL */
+.actions button {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.actions button:hover {
+  background: var(--secondary);
+  transform: translateY(-1px);
+}
+
+/* BOTÓN WHATSAPP */
+.actions a.whatsapp {
+  background: #25d366;
+  color: var(--white);
+}
+
+.actions a.whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-1px);
+}
+
+/* MODAL / PESTAÑA */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+/* CONTENIDO DEL MODAL */
+.modal-content {
+  background: #0f1720; /* o el azul que estés usando */
+  color: #f0f0f0;
+  padding: 20px;
+  border-radius: 16px;
+  width: 95%;
+  max-width: 900px;   /* ahora sí se expande en desktop */
+  max-height: 90vh;   /* evita que se salga verticalmente */
+  overflow-y: auto;   /* scroll interno si es necesario */
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content p {
+  color: #cfd8dc;
+}
+
+.close {
+  background: #1f3c4f;
+  color: #ffffff;
+}
+
+
+/* IMAGEN DENTRO DEL MODAL */
+.modal-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* BOTÓN CERRAR */
+.close {
+  margin-top: 15px;
+  background: var(--accent);
+  color: #333;
+}
+
+/* ANIMACIÓN SUAVE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefits {
+  margin-top: 15px;
+}
+
+.benefits p {
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 8px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

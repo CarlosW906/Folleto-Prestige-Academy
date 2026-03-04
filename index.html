@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inglés Americano Conversacional</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  function closeOnOutside(event, id) {
+    if (event.target.id === id) {
+      closeModal(id);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".fade-in");
+
+    elements.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("visible");
+      }, index * 200);
+    });
+  });
+</script>
+
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <img src="assets/logo.png" alt="Logo Inglés Americano" class="logo">
+    </header>
+    <p class="academy-name">Prestige Academy</p>
+    <section class="hero">
+      <h1>Inglés Conversacional</h1>
+      <p class="subtitle">
+        Aprende a hablar inglés desde cero, de forma práctica y real
+        Llevamos 3 años de buenos resultados y nos actualizamos para darte mejores resultados.
+      </p>
+      <p>
+        Aprender inglés no se trata solo de estudiar reglas, sino de desarrollar confianza para comunicarte en situaciones reales.
+        En Prestige Academy trabajamos con un enfoque conversacional estructurado, adaptado a tu nivel y ritmo. Nuestro objetivo es que avances de forma clara, progresiva y práctica.
+      </p>
+      <ul class="benefits">
+        <p>Tenemos los siguientes beneficios: </p>
+        <p>✔ Desde cero</p>
+        <p>✔ Clases 1-1 y grupales</p>
+        <p>✔ Horarios flexibles</p>
+        <p>✔ Principiante a Avanzado.</p>
+        <p>✔ Programa de Referidos</p>
+        <p>✔ Examen de colocación al entrar</p>
+      </ul>
+
+      <a href="temario.html" style="display:block; margin-top:15px; font-size:0.9rem; color:#0c3647;">
+  Ver programa de estudio
+</a>
+
+
+    </section>
+    <section class="actions">
+      <button onclick="openModal('pricesModal')">Ver precios</button>
+      <button onclick="openModal('scheduleModal')">Ver horarios disponibles</button>
+      <a href="https://wa.me/522941013632?text=Hola,%20me%20interesan%20los%20cursos%20de%20ingl%C3%A9s%20de%20Prestige%20Academy%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20para%20comenzar." 
+   class="whatsapp">
+   Contactar por WhatsApp
+</a>
+    </section>
+  </main>
+  <div class="modal" id="pricesModal" onclick="closeOnOutside(event, 'pricesModal')">
+  <div class="modal-content">
+    <button class="close" onclick="closeModal('pricesModal')">&times;</button>
+    <img src="assets/precios.png" alt="Tabla de precios">
+    <p class="note">Planes accesibles · Pregunta por descuentos</p>
+  </div>
+</div>
+
+
+  <!-- MODAL HORARIOS -->
+  <div class="modal" id="scheduleModal" onclick="closeOnOutside(event, 'scheduleModal')">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('scheduleModal')">&times;</span>
+      <img src="assets/horarios.png" alt="Horarios disponibles">
+      <p class="note">Los horarios se ajustan según disponibilidad</p>
+    </div>
+  </div>
+
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
