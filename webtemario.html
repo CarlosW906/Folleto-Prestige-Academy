@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestige Academy</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <h1 class="nav-title">Prestige Academy</h1>
+
+  <nav id="menu">
+  <div class="close-btn" onclick="toggleMenu()">✕</div>
+
+  <a href="index.html">Inicio</a>
+  <a href="#sobrenosotros">Sobre nosotros</a>
+  <!--
+  <a href="#cursos">Cursos</a>
+  <a href="#contacto">Contacto</a>
+  -->
+</nav>
+</header>
+  
+  <main class="container">
+
+    <!-- LOGO -->
+    <header>
+      <img src="assets/logo.png" alt="Prestige Academy" class="logo">
+      <p class="academy-name">Prestige Academy</p>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Programa de Desarrollo Web </h1>
+      <p>
+        Crear Landing pages y páginas web funcionales y listas para clientes reales.
+      </p>
+    </section>
+
+    <!-- TEMARIO -->
+
+    <!--Menu Starter-->
+     <section class="hero">
+      <div class="accordion" onclick="toggleAccordion(this)">
+    <h2>Introducción a HTML</h2>
+    <span class="icon">+</span>
+  </div>
+      <div class="panel">
+        <p>✔ Alphabet and numbers</p>
+        
+      </div>
+    </section>
+
+  <!--Menu beginner-->
+    <section class="hero">
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <h2>Estilos CSS</h2>
+    <span class="icon">+</span>
+  </div>
+  <div class="panel">
+    <p>✔ Present progressive: Affirmative, Negative & Questions</p>
+  </div>
+</section>
+
+<!--Menu intermediate-->
+    <section class="hero">
+      <div class="accordion" onclick="toggleAccordion(this)">
+    <h2>Programación JavaScript</h2>
+    <span class="icon">+</span>
+  </div>
+      <div class="panel">
+        <p>✔ Present progressive for the future</p>
+      </div>
+    </section>
+
+    <!--Menu Advanced-->
+    <section class="hero">
+      <div class="accordion" onclick="toggleAccordion(this)">
+    <h2>FrameWorks y Hostings</h2>
+    <span class="icon">+</span>
+    </div>
+      <div class="panel">
+        <p>✔ Infinitives</p>
+        <p>✔ Zero conditional</p>
+        <p>✔ Will/Won't: future predictions</p>
+        <p>✔ First Conditional</p>
+        <p>✔ Modals: might, must and can't</p>
+        <p>✔ Used to</p>
+        <p>✔ Present perfect: just, already and yet</p>
+        <p>✔ Would for imaginary situations</p>
+        <p>✔ Second Conditional</p>
+        <p>✔ Relative clauses</p>
+        <p>✔ Subject and object questions</p>
+      </div>
+    </section>
+
+
+    <!--botones horarios y costos-->
+    <section class="actions">
+  <button onclick="openModal('pricesModal')">Ver precios</button>
+  <button onclick="openModal('scheduleModal')">Ver horarios</button>
+</section>
+
+    <!-- CTA FINAL -->
+  <section class="cta">
+    <p>¿Listo(a) para comenzar?</p>
+    <a href="https://wa.me/522941013632" class="btn">
+      Contactar por WhatsApp
+    </a>
+  </section>
+
+  <!-- MODAL PRECIOS -->
+<div class="modal" id="pricesModal" onclick="closeOnOutside(event, 'pricesModal')">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('pricesModal')">&times;</span>
+    <img src="assets/precios.png" alt="Tabla de precios">
+  </div>
+</div>
+
+<!-- MODAL HORARIOS -->
+<div class="modal" id="scheduleModal" onclick="closeOnOutside(event, 'scheduleModal')">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('scheduleModal')">&times;</span>
+    <img src="assets/horarios.png" alt="Horarios disponibles">
+  </div>
+</div>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Prestige Academy</p>
+    <p>Clases en línea</p>
+  </footer>
+
+  </main>
+
+ 
+</body>
+</html>
